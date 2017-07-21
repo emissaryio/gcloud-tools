@@ -4,7 +4,7 @@ WORKDIR /google
 ENV GOOGLE_DIR /google
 
 # gcloud
-RUN wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-162.0.0-linux-x86_64.tar.gz -O gcloud-sdk.tar.gz \
+RUN wget -q https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-163.0.0-linux-x86_64.tar.gz -O gcloud-sdk.tar.gz \
     && tar xfz gcloud-sdk.tar.gz \
     && rm gcloud-sdk.tar.gz
 
