@@ -14,11 +14,10 @@ RUN google-cloud-sdk/bin/gcloud components install -q \
     app-engine-python-extras \
     && rm -rf google-cloud-sdk/.install/.backup
 
-ENV PYTHONPATH $GOOGLE_DIR/google-cloud-sdk/platform/google_appengine/:$PYTHONPATH
+ENV PYTHONPATH $PYTHONPATH:$GOOGLE_DIR/google-cloud-sdk/platform/google_appengine/
 
-# crcmod (for gsutil rsync)
+# install deployment script dependencies
 RUN pip install --no-cache-dir \
-    crcmod \
     pyyaml \
     requests
 
