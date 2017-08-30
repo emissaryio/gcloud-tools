@@ -1,7 +1,8 @@
 FROM emissaryio/python-virtualenv:1.0.2-3.6-slim
 
 RUN apt-get update && apt-get install -y \
-    python2.7
+    python2.7 \
+    git
 
 ENV CLOUDSDK_PYTHON /usr/bin/python2.7
 
